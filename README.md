@@ -10,7 +10,7 @@ The `ondridown` package is an R package for creating ONDRI documentation using a
 Class files (for APA style citations) are from [Citation Style Language's github page](https://github.com/citation-style-language/styles/blob/master/apa.csl). Much of the inspiration and basis of the template comes from [bookdown](https://bookdown.org/yihui/rmarkdown/).
 
 
-To use this package, please clone the repository and open the project through ```rmd_ondri_template.Rproj```. Once you've opened the project, please install it using the following lines of code.
+To use this package, please clone the repository and open the project through ```ondridown.Rproj```. Once you've opened the project, please install it using the following lines of code.
 ```
 if (!require(devtools)){
     install.packages(devtools)
