@@ -8,7 +8,6 @@ csl: apa.csl
 params:
   title: '[TITLE HERE]'
   author: '[AUTHOR HERE]'
-  date: '[DATE HERE]'
   description: '[DESCRIPTION HERE]'
 # To show all the references with no in-text citations, please uncomment this line of code.
 #nocite: '@*'
@@ -26,7 +25,7 @@ library(ggplot2)
 ---
 header-includes:
 - \usepackage{titling}
-- \pretitle{\begin{center}\vspace{-1.3cm}\LARGE\includegraphics[width=5cm]{ONDRI.png}\\[\bigskipamount]\hfill\break}
+- \pretitle{\begin{center}\vspace{-1.3cm}\LARGE\includegraphics[width=5cm]{images/ONDRI.png}\\[\bigskipamount]\hfill\break}
 - \posttitle{\end{center}}
 - \preauthor{\begin{center} \vspace{0.3cm}}
 - \postauthor{\vspace{0.3cm} \end{center}}
@@ -34,7 +33,7 @@ header-includes:
 - \postdate{\\[\bigskipamount] \vspace{0.3cm} \hrulefill \end{center} \vspace{0.6cm} `r params$description`}
 title: `r params$title`
 author: `r params$author`
-date: `r params$date`
+date: "Updated as of `r format(Sys.Date(), format = '%B %d, %Y')`"
 documentclass: article
 fontsize: 10pt
 geometry: margin=2.54cm
@@ -100,7 +99,7 @@ ggplot(cars, aes(speed, dist)) + geom_point()
 
 ## External image output.
 ```{r echo=FALSE,error=FALSE,out.width="100%",fig.cap="[CAPTION HERE]"}
-knitr::include_graphics("missingness-plot.png")
+knitr::include_graphics("images/missingness-plot.png")
 ```
 
 <!-- Add spacing between subsections. -->
@@ -140,7 +139,11 @@ $$\alpha, \beta,  \gamma, \Gamma$$
 
 # In-text citations (APA format)
 <!-- @ symbol.  -->
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. @item1 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. @item2 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. @item3
+This is an article citation. @item1 \
+This is an inproceedings citation, which is intended to be used for conference papers. @item2 \
+This is a book citation. @item3 \
+This is a website citation. @item4 \
+This is how you cite multiple sources in a sentence. @item1 @item3 \
 
 # References
 <!-- The div will add references to this section. To add or modify references, please go to references.bib file. -->

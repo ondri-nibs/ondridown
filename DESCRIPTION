@@ -1,13 +1,17 @@
-Package: ondridown
+Package: ONDRIdown
 Title: RMarkdown template for the ONDRI project
-Version: 0.1.0.9000
-Authors@R: 
+Version: 0.1.0.9001
+Authors@R: c(
     person(given = "Jedid",
            family = "Ahn",
+           role = c("aut"),
+           email = "jahn@research.baycrest.org"),
+    person(given = "Derek",
+           family = "Beaton",
            role = c("aut", "cre"),
-           email = "jahn@research.baycrest.org")
+           email = "dbeaton@research.baycrest.org"))
 Description: A package for creating ONDRI documentation using a standardized RMarkdown template.
-License: GPL-3
+License: GPL-3 + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
